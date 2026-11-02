@@ -1,26 +1,115 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-primary: #030f18;
+    --bg-surface: #071c2b;
+    --ocean-blue: #005B96;
+    --deep-aqua: #007F7F;
+    --sea-green: #009966;
+    --accent-orange: #f97316;
+    --light-aqua: #dff6f5;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: #030f18;
+  }
+
+  body {
+    background-color: #030f18;
+    color: #e2e8f0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #020a10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0d384e;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #14506f;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Glassmorphism utility */
+.ocean-glass {
+  background: rgba(7, 28, 43, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ocean-glass-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ocean-glass-hover:hover {
+  background: rgba(13, 45, 68, 0.8);
+  border-color: rgba(45, 212, 191, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(0, 91, 150, 0.3);
+}
+
+/* Glow effects */
+.glow-teal {
+  box-shadow: 0 0 35px -5px rgba(20, 184, 166, 0.3);
+}
+
+.glow-orange {
+  box-shadow: 0 0 30px -5px rgba(249, 115, 22, 0.4);
+}
+
+/* Water caustics animated gradient */
+@keyframes underwater-shimmer {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-shimmer {
+  background-size: 200% 200%;
+  animation: underwater-shimmer 18s ease infinite;
+}
+
+/* Float animation */
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
 }
