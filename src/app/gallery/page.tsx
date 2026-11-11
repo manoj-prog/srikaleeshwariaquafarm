@@ -19,11 +19,11 @@ export default function GalleryPage() {
 
   const categories = [
     "All",
-    "Fish Farming",
-    "Shrimp Farming",
-    "Facilities",
-    "Hatchery",
-    "Harvesting",
+    "Flowerhorn",
+    "Neocaridina Shrimps",
+    "Angelfish",
+    "Platinum Crystal Molly",
+    "Breeding Setup",
   ];
 
   const filteredItems =
@@ -47,11 +47,11 @@ export default function GalleryPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black uppercase text-white tracking-tight leading-[1.05]">
             A WINDOW INTO OUR <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-sky-400 to-orange-400">
-              WATERS & OPERATIONS
+              BREEDING STUDIO & LIVESTOCK
             </span>
           </h1>
           <p className="mt-6 text-base sm:text-xl text-slate-300 font-light leading-relaxed max-w-2xl">
-            Explore authentic photographs of our hatcheries, intensive grow-out water bodies, microbiology diagnostic laboratories, and export harvest dispatches.
+            Explore authentic photographs of our 4 specialized breeding lines — Flowerhorn, Neocaridina Shrimps, Angelfish strains, and Platinum Crystal Mollies — along with our pristine conditioning and safe packaging setups.
           </p>
         </div>
 

@@ -5,10 +5,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     '',
-    '/about',
-    '/services',
-    '/facilities',
-    '/sustainability',
+    '/flowerhorn',
+    '/neocaridina-shrimps',
+    '/angelfish',
+    '/platinum-crystal-molly',
     '/gallery',
     '/contact',
   ];

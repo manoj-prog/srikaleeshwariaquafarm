@@ -28,7 +28,7 @@ export default function ContactPage() {
     phone: "",
     email: "",
     location: "",
-    inquiryType: "Seed & Fingerling Procurement",
+    inquiryType: "Flowerhorn Fish Inquiry & Video Selection",
     message: "",
   });
 
@@ -62,11 +62,11 @@ export default function ContactPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black uppercase text-white tracking-tight leading-[1.05]">
             CONNECT WITH OUR <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-sky-400 to-orange-400">
-              AQUACULTURE AGRONOMISTS
+              BREEDING STUDIO
             </span>
           </h1>
           <p className="mt-6 text-base sm:text-xl text-slate-300 font-light leading-relaxed max-w-2xl">
-            Orders, certified SPF seed allocations, pond diagnostics, and hatchery visits start with a message. We reply to all inquiries within 4 business hours.
+            Livestock availability, Flowerhorn videos, Neocaridina shrimp colonies, Angelfish pairs, and safe pan-India shipping inquiries start with a message. We reply to all inquiries promptly.
           </p>
         </div>
       </section>
@@ -82,10 +82,10 @@ export default function ContactPage() {
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
                 <h3 className="text-2xl font-bold text-white">
-                  Message Dispatched to Farm Operations
+                  Message Dispatched to Breeding Studio
                 </h3>
                 <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
-                  Thank you, <span className="text-white font-semibold">{formData.name}</span>. An agronomist will review your request for{" "}
+                  Thank you, <span className="text-white font-semibold">{formData.name}</span>. Our team will review your inquiry regarding{" "}
                   <span className="text-teal-300 font-semibold">{formData.inquiryType}</span> and get in touch with you shortly.
                 </p>
 
@@ -108,7 +108,7 @@ export default function ContactPage() {
                         phone: "",
                         email: "",
                         location: "",
-                        inquiryType: "Seed & Fingerling Procurement",
+                        inquiryType: "Flowerhorn Fish Inquiry & Video Selection",
                         message: "",
                       });
                     }}
@@ -125,10 +125,10 @@ export default function ContactPage() {
                     Direct Inquiry Desk
                   </span>
                   <h3 className="text-2xl font-bold text-white">
-                    Send an Official Farm Inquiry
+                    Send a Livestock Inquiry
                   </h3>
                   <p className="text-xs text-slate-400 mt-1">
-                    Fill out the form below. For urgent seed delivery or disease emergencies, please call our emergency hotline directly.
+                    Fill out the form below for stock availability, video selection, or shipping quotes. Or DM us directly on Instagram.
                   </p>
                 </div>
 
@@ -211,19 +211,18 @@ export default function ContactPage() {
                       }
                       className="w-full bg-[#030d14] border border-white/15 focus:border-teal-400 focus:outline-none rounded-xl px-4 py-3 text-sm text-white transition"
                     >
-                      <option value="Seed & Fingerling Procurement">Seed & Fingerling Procurement (GIFT Tilapia, Carp, SPF Shrimp)</option>
-                      <option value="Aquaculture Consultancy & Pond Setup">Aquaculture Consultancy & Turnkey Biofloc Setup</option>
-                      <option value="Commercial Feed & Live Cultures">Commercial Feed & Live Feed Cultures Supply</option>
-                      <option value="Water & Soil Diagnostics Lab">Water & Soil Quality Lab Testing</option>
-                      <option value="Harvest Logistics & Export Buyback">Harvest Logistics & Institutional Seafood Export</option>
-                      <option value="Hatchery Facility Visit Request">Hatchery Facility Visit Request</option>
-                      <option value="Other Aquaculture Inquiries">Other Inquiries</option>
+                      <option value="Flowerhorn Fish Inquiry & Video Selection">Flowerhorn Selection (Kamfa / Super Red Dragon)</option>
+                      <option value="Neocaridina Shrimps Colony Order">Neocaridina Shrimps (Fire Red, Blue Dream, Golden Yellow)</option>
+                      <option value="Angelfish Strains & Breeding Pairs">Angelfish Strains (Platinum White, Marble, Koi)</option>
+                      <option value="Platinum Crystal Molly Selection">Platinum Crystal Molly (Sailfin, Lyretail)</option>
+                      <option value="Safe Shipping & Packaging Inquiries">Safe Shipping & Transit Protocol Inquiries</option>
+                      <option value="General Studio Consultation">General Studio Consultation</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                      Message & Farm Details
+                      Livestock & Tank Details
                     </label>
                     <textarea
                       rows={4}
@@ -231,7 +230,7 @@ export default function ContactPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      placeholder="Please mention your pond acreage, salinity level, water source, or specific questions..."
+                      placeholder="Please mention the species or strain, quantity desired, tank setup, or any specific questions..."
                       className="w-full bg-[#030d14] border border-white/15 focus:border-teal-400 focus:outline-none rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 transition"
                     />
                   </div>
@@ -324,7 +323,7 @@ export default function ContactPage() {
             {/* Business Contact Cards */}
             <div className="ocean-glass rounded-3xl p-8 border border-white/10 space-y-6">
               <h4 className="text-xs font-mono uppercase tracking-widest text-orange-400 font-bold">
-                Farm Office & Headquarters
+                Studio Base & Contact
               </h4>
 
               <div className="space-y-4 text-sm text-slate-300">
@@ -418,9 +417,9 @@ export default function ContactPage() {
               <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-slate-400">
                 <span className="flex items-center gap-1.5 text-teal-300">
                   <ShieldCheck className="w-4 h-4" />
-                  <span>CAA & MPEDA Authorized</span>
+                  <span>100% Conditioned Livestock</span>
                 </span>
-                <span>ISO 9001:2015</span>
+                <span>DOA Guarantee Protocol</span>
               </div>
             </div>
 

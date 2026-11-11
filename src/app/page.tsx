@@ -6,11 +6,8 @@ import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 
 import HeroBanner from "@/components/sections/HeroBanner";
-import AboutPreview from "@/components/sections/AboutPreview";
-import ServicesGrid from "@/components/sections/ServicesGrid";
-import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import AquacultureProcess from "@/components/sections/AquacultureProcess";
-import StatsCounter from "@/components/sections/StatsCounter";
+import SpecialtyLines from "@/components/sections/SpecialtyLines";
+import PackagingDelivery from "@/components/sections/PackagingDelivery";
 import GalleryPreview from "@/components/sections/GalleryPreview";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactCTA from "@/components/sections/ContactCTA";
@@ -24,7 +21,7 @@ export default function Home() {
       {/* Dynamic Depth Meter HUD */}
       <DepthHUD />
 
-      {/* Floating Action Elements */}
+      {/* Floating Quick Action Elements */}
       <FloatingWhatsApp />
       <ScrollToTop />
 
@@ -34,19 +31,16 @@ export default function Home() {
       {/* Deep Ocean Layered Background with Radial Depth Transitions */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-0 inset-x-0 h-[1000px] bg-gradient-to-b from-[#062438] via-[#051a29] to-transparent opacity-60" />
-        <div className="absolute top-[1800px] inset-x-0 h-[1200px] bg-radial from-[#005B96]/10 to-transparent pointer-events-none" />
-        <div className="absolute top-[3500px] inset-x-0 h-[1200px] bg-radial from-[#007F7F]/10 to-transparent pointer-events-none" />
+        <div className="absolute top-[1400px] inset-x-0 h-[1000px] bg-radial from-[#005B96]/10 to-transparent pointer-events-none" />
+        <div className="absolute top-[2600px] inset-x-0 h-[1000px] bg-radial from-[#007F7F]/10 to-transparent pointer-events-none" />
         <div className="absolute bottom-0 inset-x-0 h-[1000px] bg-gradient-to-t from-[#020b12] to-transparent" />
       </div>
 
-      {/* Main Home Sections */}
+      {/* Main Home Sections Focused on 4 Core Breeding Lines & Transport */}
       <div className="relative z-10">
         <HeroBanner />
-        <AboutPreview />
-        <ServicesGrid />
-        <WhyChooseUs />
-        <AquacultureProcess />
-        <StatsCounter />
+        <SpecialtyLines />
+        <PackagingDelivery />
         <GalleryPreview />
         <TestimonialsSection />
         <ContactCTA />

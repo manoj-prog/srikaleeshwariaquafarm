@@ -30,10 +30,10 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Facilities", href: "/facilities" },
-    { name: "Sustainability", href: "/sustainability" },
+    { name: "Flowerhorn", href: "/flowerhorn" },
+    { name: "Neocaridina Shrimps", href: "/neocaridina-shrimps" },
+    { name: "Angelfish", href: "/angelfish" },
+    { name: "Platinum Crystal Molly", href: "/platinum-crystal-molly" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "/contact" },
   ];

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { Fish, MapPin, Phone, Mail, Clock, ShieldCheck, ArrowRight } from "lucide-react";
+import { Fish, MapPin, Phone, Mail, Clock, ShieldCheck, ArrowRight, Sparkles } from "lucide-react";
 import InstagramIcon from "@/components/ui/InstagramIcon";
-import { COMPANY_INFO, SERVICES_LIST } from "@/data/aquacultureData";
+import { COMPANY_INFO, BREEDING_LINES } from "@/data/aquacultureData";
 
 export default function Footer() {
   return (
@@ -26,27 +26,32 @@ export default function Footer() {
                   Sri Kaleeshwari
                 </span>
                 <span className="text-[10px] font-mono tracking-widest text-teal-400 uppercase">
-                  AQUA FARM • TAMIL NADU
+                  AQUA FARM • CHENNAI
                 </span>
               </div>
             </Link>
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              Empowering India&apos;s fish and shrimp farmers through sustainable biofloc infrastructure, certified SPF seed stock, probiotic water ecology, and global-standard cold-chain harvest logistics.
+              {COMPANY_INFO.studioTitle} based in Chennai, India. Master-bred exotic aquatic lines with superior genetics, raised in conditioned, high-stability parameters.
             </p>
 
             <div className="pt-2">
-              <div className="text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">
-                Certified Standards
+              <div className="text-xs font-mono text-orange-400 uppercase tracking-widest mb-2 font-bold">
+                Specialized Livestock Standards
               </div>
               <div className="flex flex-wrap gap-2">
-                {COMPANY_INFO.certifications.map((c) => (
+                {[
+                  "2+ Years Breeding Focus",
+                  "100% Home Water Conditioned",
+                  "Pure Oxygen Transit Bagging",
+                  "DOA Replacement Guarantee",
+                ].map((tag) => (
                   <span
-                    key={c.name}
+                    key={tag}
                     className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white/5 border border-white/10 text-[11px] font-mono text-slate-300"
                   >
                     <ShieldCheck className="w-3.5 h-3.5 text-teal-400" />
-                    {c.name}
+                    {tag}
                   </span>
                 ))}
               </div>
@@ -56,17 +61,17 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="text-xs font-mono uppercase tracking-widest text-white mb-4">
-              Explore
+              Explore Studio
             </h4>
             <ul className="space-y-2.5 text-xs font-medium">
               {[
                 { name: "Home", href: "/" },
-                { name: "About Us", href: "/about" },
-                { name: "Our Services", href: "/services" },
-                { name: "Farm Facilities", href: "/facilities" },
-                { name: "Sustainability & Biofloc", href: "/sustainability" },
-                { name: "Aquaculture Gallery", href: "/gallery" },
-                { name: "Contact & Advisory", href: "/contact" },
+                { name: "Flowerhorn", href: "/flowerhorn" },
+                { name: "Neocaridina Shrimps", href: "/neocaridina-shrimps" },
+                { name: "Angelfish", href: "/angelfish" },
+                { name: "Platinum Crystal Molly", href: "/platinum-crystal-molly" },
+                { name: "Livestock Gallery", href: "/gallery" },
+                { name: "Contact & Location", href: "/contact" },
               ].map((item) => (
                 <li key={item.name}>
                   <Link
@@ -81,19 +86,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Core Services */}
+          {/* Core Breeding Lines */}
           <div>
             <h4 className="text-xs font-mono uppercase tracking-widest text-white mb-4">
-              Key Capabilities
+              Breeding Lines
             </h4>
             <ul className="space-y-2.5 text-xs font-medium">
-              {SERVICES_LIST.slice(0, 6).map((service) => (
-                <li key={service.id}>
+              {BREEDING_LINES.map((line) => (
+                <li key={line.id}>
                   <Link
-                    href={`/services#${service.id}`}
+                    href={line.slug}
                     className="hover:text-orange-400 transition-colors text-slate-400 block line-clamp-1"
                   >
-                    {service.title}
+                    {line.name}
                   </Link>
                 </li>
               ))}
@@ -103,7 +108,7 @@ export default function Footer() {
           {/* Direct Contact */}
           <div>
             <h4 className="text-xs font-mono uppercase tracking-widest text-white mb-4">
-              Direct Contact
+              Studio Base & Contact
             </h4>
             <div className="space-y-3 text-xs text-slate-400">
               <div className="flex items-start gap-2.5">
@@ -113,15 +118,21 @@ export default function Footer() {
                     href={COMPANY_INFO.mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-teal-300 transition"
+                    className="hover:text-teal-300 transition leading-relaxed block"
                   >
-                    {COMPANY_INFO.headquarters}
+                    {COMPANY_INFO.address}
                   </a>
-                  <span className="text-[10px] text-teal-400 block mt-0.5 font-mono">
+                  <a
+                    href={COMPANY_INFO.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[10px] text-teal-400 hover:underline block mt-0.5 font-mono"
+                  >
                     Open in Google Maps &rarr;
-                  </span>
+                  </a>
                 </div>
               </div>
+
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-teal-400 shrink-0" />
                 <a
@@ -131,6 +142,17 @@ export default function Footer() {
                   {COMPANY_INFO.phone}
                 </a>
               </div>
+
+              <div className="flex items-center gap-2.5">
+                <Mail className="w-4 h-4 text-teal-400 shrink-0" />
+                <a
+                  href={`mailto:${COMPANY_INFO.email}`}
+                  className="font-mono text-slate-200 hover:text-teal-300 transition break-all"
+                >
+                  {COMPANY_INFO.email}
+                </a>
+              </div>
+
               <div className="flex items-start gap-2.5">
                 <InstagramIcon className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
                 <div>
@@ -146,16 +168,13 @@ export default function Footer() {
                     href={COMPANY_INFO.socials.instagramDmUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[10px] text-teal-400 hover:text-teal-300 underline font-mono"
+                    className="text-[10px] text-teal-400 hover:text-teal-300 underline font-mono block"
                   >
-                    Send Direct Message (DM) &rarr;
+                    Direct Message (DM) &rarr;
                   </a>
                 </div>
               </div>
-              <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-teal-400 shrink-0" />
-                <span className="font-mono text-slate-200">{COMPANY_INFO.email}</span>
-              </div>
+
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
                 <span>{COMPANY_INFO.workingHours}</span>
@@ -164,17 +183,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Legal Indian Regulatory Compliance Disclaimer (Echoing Orange Aquaculture screenshot) */}
-        <div className="py-8 border-b border-white/10 text-center max-w-3xl mx-auto space-y-3">
-          <p className="text-xs text-slate-400 leading-relaxed">
-            We strictly comply with the applicable aquaculture and environmental regulations of the Government of India, the Coastal Aquaculture Authority (CAA Act 2005), and MPEDA. We do not cultivate, trade, sell, or distribute banned, unauthorized, or ecologically hazardous aquatic species or use prohibited prophylactic antibiotics under applicable Indian laws.
-          </p>
-        </div>
-
         {/* Ambient Easter Egg & Copyright */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-400 font-mono">
           <div>
-            © {new Date().getFullYear()} {COMPANY_INFO.legalName} • CHENNAI, INDIA
+            © {new Date().getFullYear()} {COMPANY_INFO.name} • CHENNAI, INDIA
           </div>
 
           <div className="text-center text-teal-400/80 hover:text-teal-300 transition-colors cursor-default">
@@ -200,11 +212,12 @@ export default function Footer() {
               Google Maps
             </a>
             <span>•</span>
-            <Link href="/sitemap.xml" className="hover:text-white transition">Sitemap</Link>
+            <Link href="/sitemap.xml" className="hover:text-white transition">
+              Sitemap
+            </Link>
           </div>
         </div>
       </div>
     </footer>
   );
 }
-

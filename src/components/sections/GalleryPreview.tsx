@@ -17,20 +17,20 @@ export default function GalleryPreview() {
       <section className="relative z-10 py-24 px-6 md:px-16 lg:px-24 max-w-7xl mx-auto border-t border-white/5">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div>
-            <DepthBadge label="-32 M · VISUAL EVIDENCE" variant="teal" />
+            <DepthBadge label="-28 M · VISUAL ARCHIVE" variant="teal" />
             <h2 className="text-xs font-mono uppercase tracking-widest text-orange-400 mt-3 mb-2">
-              On the Ground
+              Studio Photography
             </h2>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase text-white tracking-tight">
               INSIDE SRI KALEESHWARI <br />
-              <span className="text-teal-400">PONDS & HATCHERIES</span>
+              <span className="text-teal-400">AQUARIUM BREEDING STUDIO</span>
             </h3>
           </div>
           <Link
             href="/gallery"
             className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-orange-400 hover:text-orange-300 font-bold transition group"
           >
-            <span>View All 20+ Facilities & Crops</span>
+            <span>View Full Livestock Gallery</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

@@ -28,14 +28,14 @@ export default function ContactCTA() {
             </h3>
 
             <p className="text-slate-300 text-sm sm:text-base font-light mt-4 leading-relaxed">
-              Orders, stock updates, fingerling bookings, and farm visits all start with a message. Follow our page to see fresh batches hatch and send a direct message anytime.
+              Livestock availability, pair selection, water parameter consultations, and shipping quotes all start with a message. Send a direct message or email anytime.
             </p>
 
             {/* Quick Meta Row (Orange Aquaculture layout) */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 pb-8 border-y border-white/10 my-8 text-xs font-mono">
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 pt-8 pb-8 border-y border-white/10 my-8 text-xs font-mono">
               <div>
                 <span className="text-slate-400 block uppercase tracking-wider">
-                  BASED IN
+                  STUDIO BASE
                 </span>
                 <span className="text-white font-bold mt-1 block">
                   {COMPANY_INFO.address}
@@ -47,7 +47,7 @@ export default function ContactCTA() {
                   className="text-teal-400 hover:text-teal-300 underline mt-1 inline-flex items-center gap-1 text-[11px]"
                 >
                   <MapPin className="w-3 h-3" />
-                  <span>View on Google Maps</span>
+                  <span>Google Maps</span>
                 </a>
               </div>
               <div>
@@ -61,12 +61,26 @@ export default function ContactCTA() {
                   {COMPANY_INFO.phone}
                 </a>
                 <span className="text-[10px] text-slate-400 mt-1 block">
-                  Available Mon–Sat 7AM–6:30PM
+                  Mon–Sat 8AM–7PM
                 </span>
               </div>
               <div>
                 <span className="text-slate-400 block uppercase tracking-wider">
-                  FOLLOW & DM
+                  EMAIL DIRECT
+                </span>
+                <a
+                  href={`mailto:${COMPANY_INFO.email}`}
+                  className="text-sky-300 hover:text-white font-bold mt-1 block break-all"
+                >
+                  {COMPANY_INFO.email}
+                </a>
+                <span className="text-[10px] text-slate-400 mt-1 block">
+                  Replies within hours
+                </span>
+              </div>
+              <div>
+                <span className="text-slate-400 block uppercase tracking-wider">
+                  INSTAGRAM DM
                 </span>
                 <a
                   href={COMPANY_INFO.socials.instagramUrl}
@@ -100,13 +114,13 @@ export default function ContactCTA() {
                 <span>Message on Instagram</span>
               </a>
 
-              <button
-                onClick={() => setModalOpen(true)}
+              <a
+                href={`mailto:${COMPANY_INFO.email}`}
                 className="bg-teal-500/20 hover:bg-teal-500/30 text-teal-300 border border-teal-400/40 text-xs font-mono font-bold uppercase tracking-wider px-7 py-4 rounded-full transition flex items-center gap-2"
               >
                 <Mail className="w-4 h-4" />
-                <span>Email the Hatchery</span>
-              </button>
+                <span>Email: {COMPANY_INFO.email}</span>
+              </a>
 
               <a
                 href={`tel:${COMPANY_INFO.rawPhone}`}
