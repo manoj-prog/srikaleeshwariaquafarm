@@ -2,26 +2,42 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sri Kaleeshwari Aqua Farm | Leading Sustainable Aquaculture & Fish Farming",
+  metadataBase: new URL("https://srikaleeshwariaquafarm.com"),
+  title: "Sri Kaleeshwari Aqua Farm | Premium Aquarium Livestock Breeding Studio",
   description:
-    "Sri Kaleeshwari Aqua Farm - Pioneer in sustainable aquaculture, freshwater fish farming, Vannamei shrimp culture, hatchery services, and biofloc consultancy in India.",
+    "Master-Bred Exotic Aquatic Lines with Superior Genetics. Specialized in high-kok Flowerhorn Fish, vibrant Neocaridina Shrimps, exquisite Angelfish strains, and Platinum Crystal White Mollies.",
   keywords: [
-    "aquaculture India",
-    "fish farming Tamil Nadu",
-    "shrimp farming hatchery",
+    "Flowerhorn Fish India",
+    "Kamfa Flowerhorn",
+    "Super Red Dragon Flowerhorn",
+    "Neocaridina Shrimps India",
+    "Blue Dream Shrimp",
+    "Bloody Mary Shrimp",
+    "Angelfish Breeders Chennai",
+    "Platinum Crystal Molly",
+    "Ornamental Fish Breeding Studio",
     "Sri Kaleeshwari Aqua Farm",
-    "sustainable fish feed",
-    "biofloc pond management",
-    "fish seed supplier"
   ],
   authors: [{ name: "Sri Kaleeshwari Aqua Farm" }],
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
-    title: "Sri Kaleeshwari Aqua Farm | Sustainable Aquaculture for a Better Tomorrow",
+    title: "Sri Kaleeshwari Aqua Farm | Premium Aquarium Livestock Breeding Studio",
     description:
-      "Modern infrastructure, biosecure hatcheries, and eco-friendly aquaculture solutions empowering Indian fish and shrimp farmers.",
+      "Master-Bred Exotic Aquatic Lines with Superior Genetics. Specialized in high-kok Flowerhorn Fish, vibrant Neocaridina Shrimps, exquisite Angelfish strains, and show-grade Platinum Crystal White Mollies.",
     type: "website",
     locale: "en_IN",
     siteName: "Sri Kaleeshwari Aqua Farm",
+    images: [
+      {
+        url: "/logo.png",
+        width: 240,
+        height: 240,
+        alt: "Sri Kaleeshwari Aqua Farm Logo - Quality Aquatic Life",
+      },
+    ],
   },
 };
 

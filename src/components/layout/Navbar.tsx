@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowUpRight, Fish, Droplet } from "lucide-react";
+import { Menu, X, ArrowUpRight, Droplet } from "lucide-react";
 import InstagramIcon from "@/components/ui/InstagramIcon";
 import ConsultationModal from "@/components/ui/ConsultationModal";
 import { COMPANY_INFO } from "@/data/aquacultureData";
@@ -50,9 +51,16 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 rounded-full bg-gradient-to-tr from-[#005B96] via-[#007F7F] to-orange-500 flex items-center justify-center p-[2px] shadow-[0_0_15px_rgba(0,127,127,0.4)] group-hover:shadow-[0_0_20px_rgba(249,115,22,0.6)] transition-all duration-300">
-              <div className="w-full h-full bg-[#030f18] rounded-full flex items-center justify-center">
-                <Fish className="w-5 h-5 text-teal-300 group-hover:text-orange-400 transition-colors" />
+            <div className="relative w-11 h-11 rounded-full bg-gradient-to-tr from-[#005B96] via-teal-400 to-orange-500 p-[2px] shadow-[0_0_15px_rgba(0,127,127,0.4)] group-hover:shadow-[0_0_20px_rgba(249,115,22,0.6)] transition-all duration-300 shrink-0">
+              <div className="w-full h-full bg-white rounded-full flex items-center justify-center overflow-hidden p-0.5">
+                <Image
+                  src="/logo.png"
+                  alt="Sri Kaleeshwari Aqua Farm Logo"
+                  width={44}
+                  height={44}
+                  priority
+                  className="w-full h-full object-contain rounded-full transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
             </div>
             <div className="flex flex-col">
@@ -60,7 +68,7 @@ export default function Navbar() {
                 Sri Kaleeshwari
               </span>
               <span className="text-[10px] font-mono tracking-widest text-teal-400 uppercase mt-0.5 font-semibold">
-                Aqua Farm • India
+                Aqua Farm • Chennai
               </span>
             </div>
           </Link>
@@ -123,15 +131,21 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#030f18]/98 backdrop-blur-xl animate-in fade-in slide-in-from-top-4 duration-200">
           <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-teal-500/20 border border-teal-500/40 flex items-center justify-center text-teal-300">
-                <Fish className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-full bg-white p-0.5 border border-teal-500/40 flex items-center justify-center overflow-hidden shadow-lg shadow-teal-500/20 shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="Sri Kaleeshwari Aqua Farm Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain rounded-full"
+                />
               </div>
               <div>
                 <div className="font-bold text-white text-base leading-none">
                   Sri Kaleeshwari
                 </div>
                 <div className="text-[10px] font-mono text-teal-400 tracking-wider">
-                  AQUA FARM
+                  AQUA FARM • CHENNAI
                 </div>
               </div>
             </div>

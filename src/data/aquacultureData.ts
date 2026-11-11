@@ -37,6 +37,7 @@ export interface GalleryItem {
 
 export const COMPANY_INFO = {
   name: "Sri Kaleeshwari Aqua Farm",
+  logo: "/logo.png",
   studioTitle: "Premium Aquarium Livestock Breeding Studio",
   tagline: "Master-Bred Exotic Aquatic Lines With Superior Genetics.",
   heroSummary:

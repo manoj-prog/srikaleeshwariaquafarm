@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { X, CheckCircle, Send, PhoneCall, Mail } from "lucide-react";
 import InstagramIcon from "@/components/ui/InstagramIcon";
 import { COMPANY_INFO } from "@/data/aquacultureData";
@@ -14,7 +15,7 @@ interface ConsultationModalProps {
 export default function ConsultationModal({
   isOpen,
   onClose,
-  defaultService = "General Aquaculture Inquiry",
+  defaultService = "Flowerhorn Selection (Kamfa / Super Red Dragon)",
 }: ConsultationModalProps) {
   const [formData, setFormData] = useState({
     name: "",
@@ -100,16 +101,27 @@ export default function ConsultationModal({
           </div>
         ) : (
           <div>
-            <div className="mb-6">
-              <span className="text-xs font-mono uppercase tracking-widest text-orange-400">
-                Direct Field Agronomist Advisory
-              </span>
-              <h2 className="text-2xl font-bold text-white mt-1">
-                Request an Aquaculture Consultation
-              </h2>
-              <p className="text-xs text-slate-300 mt-1">
-                Whether setting up new ponds, sourcing certified SPF seed, or troubleshooting water quality, our specialists are ready to assist.
-              </p>
+            <div className="flex items-center gap-3.5 mb-6">
+              <div className="w-12 h-12 rounded-full bg-white p-0.5 border border-teal-400/40 shadow-lg shadow-teal-500/20 flex items-center justify-center overflow-hidden shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="Sri Kaleeshwari Aqua Farm Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-contain rounded-full"
+                />
+              </div>
+              <div>
+                <span className="text-[10px] font-mono uppercase tracking-widest text-teal-400 font-bold block">
+                  Sri Kaleeshwari Aqua Farm
+                </span>
+                <h2 className="text-xl sm:text-2xl font-bold text-white leading-tight">
+                  Livestock Selection & Advisory
+                </h2>
+                <p className="text-xs text-slate-300 mt-0.5">
+                  Select your species, request tank video previews, or ask about parameters and shipping.
+                </p>
+              </div>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -179,26 +191,24 @@ export default function ConsultationModal({
                   onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
                   className="w-full bg-[#030d14] border border-white/15 focus:border-teal-400 focus:outline-none rounded-lg px-3.5 py-2 text-sm text-white transition"
                 >
-                  <option value="Freshwater Fish Seed & Farming">Freshwater Fish Seed & Farming</option>
-                  <option value="SPF Vannamei / Tiger Shrimp Seed">SPF Vannamei / Tiger Shrimp Seed</option>
-                  <option value="Hatchery Seed Procurement">Hatchery Seed Procurement</option>
-                  <option value="Biofloc & Pond Setup Consultancy">Biofloc & Pond Setup Consultancy</option>
-                  <option value="Fish & Shrimp Feed Bulk Supply">Fish & Shrimp Feed Bulk Supply</option>
-                  <option value="Water Quality & Lab Disease Testing">Water Quality & Lab Disease Testing</option>
-                  <option value="Harvest & Seafood Export Partnership">Harvest & Seafood Export Partnership</option>
-                  <option value="General Inquiry">General Aquaculture Inquiry</option>
+                  <option value="Flowerhorn Fish Inquiry & Video Selection">Flowerhorn Selection (Kamfa / Super Red Dragon)</option>
+                  <option value="Neocaridina Shrimps Colony Order">Neocaridina Shrimps (Fire Red, Blue Dream, Golden Yellow)</option>
+                  <option value="Angelfish Strains & Breeding Pairs">Angelfish Strains (Platinum White, Marble, Koi)</option>
+                  <option value="Platinum Crystal Molly Selection">Platinum Crystal Molly (Sailfin, Lyretail)</option>
+                  <option value="Safe Shipping & Transit Protocol Inquiries">Safe Shipping & Transit Protocol Inquiries</option>
+                  <option value="General Studio Consultation">General Studio Consultation</option>
                 </select>
               </div>
 
               <div>
                 <label className="block text-xs font-medium text-slate-300 mb-1">
-                  Project Details / Farm Acreage
+                  Livestock & Tank Details
                 </label>
                 <textarea
                   rows={3}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Tell us about your pond acreage, target species, or current challenges..."
+                  placeholder="Tell us about your tank size, desired strain, parameters, or questions..."
                   className="w-full bg-[#030d14] border border-white/15 focus:border-teal-400 focus:outline-none rounded-lg px-3.5 py-2 text-sm text-white placeholder-slate-500 transition"
                 />
               </div>

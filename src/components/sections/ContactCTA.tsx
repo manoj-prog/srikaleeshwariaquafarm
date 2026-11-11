@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, Mail, Phone, ArrowUpRight, MapPin } from "lucide-react";
 import InstagramIcon from "@/components/ui/InstagramIcon";
@@ -20,7 +21,18 @@ export default function ContactCTA() {
           <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-teal-500/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl">
-            <DepthBadge label="-40 M · THE HATCHERY & BASE" variant="orange" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-9 h-9 rounded-full bg-white p-0.5 border border-teal-400/40 shadow-[0_0_12px_rgba(45,212,191,0.4)] flex items-center justify-center overflow-hidden shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="Sri Kaleeshwari Aqua Farm Logo"
+                  width={36}
+                  height={36}
+                  className="w-full h-full object-contain rounded-full"
+                />
+              </div>
+              <DepthBadge label="-40 M · THE HATCHERY & BASE" variant="orange" />
+            </div>
 
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase text-white mt-4 tracking-tight">
               SURFACE WHEN <br />

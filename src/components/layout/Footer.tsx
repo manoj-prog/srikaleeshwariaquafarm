@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Fish, MapPin, Phone, Mail, Clock, ShieldCheck, ArrowRight, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { MapPin, Phone, Mail, Clock, ShieldCheck, ArrowRight, Sparkles } from "lucide-react";
 import InstagramIcon from "@/components/ui/InstagramIcon";
 import { COMPANY_INFO, BREEDING_LINES } from "@/data/aquacultureData";
 
@@ -15,17 +16,23 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-14 border-b border-white/10">
           {/* Brand info (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-teal-500 to-orange-500 p-[2px] flex items-center justify-center">
-                <div className="w-full h-full bg-[#020b12] rounded-full flex items-center justify-center">
-                  <Fish className="w-5 h-5 text-teal-300" />
+            <Link href="/" className="flex items-center gap-3.5 group">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-teal-500 via-sky-400 to-orange-500 p-[2px] flex items-center justify-center shadow-lg shadow-teal-500/20 group-hover:shadow-orange-500/30 transition duration-300 shrink-0">
+                <div className="w-full h-full bg-white rounded-full flex items-center justify-center overflow-hidden p-0.5">
+                  <Image
+                    src="/logo.png"
+                    alt="Sri Kaleeshwari Aqua Farm Logo"
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain rounded-full transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
               </div>
               <div>
-                <span className="font-extrabold text-white text-lg uppercase tracking-tight block">
+                <span className="font-extrabold text-white text-lg uppercase tracking-tight block group-hover:text-teal-300 transition-colors">
                   Sri Kaleeshwari
                 </span>
-                <span className="text-[10px] font-mono tracking-widest text-teal-400 uppercase">
+                <span className="text-[10px] font-mono tracking-widest text-teal-400 uppercase font-semibold">
                   AQUA FARM • CHENNAI
                 </span>
               </div>

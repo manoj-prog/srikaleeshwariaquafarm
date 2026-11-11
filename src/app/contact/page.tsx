@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import OceanParticles from "@/components/layout/OceanParticles";
@@ -322,9 +323,25 @@ export default function ContactPage() {
 
             {/* Business Contact Cards */}
             <div className="ocean-glass rounded-3xl p-8 border border-white/10 space-y-6">
-              <h4 className="text-xs font-mono uppercase tracking-widest text-orange-400 font-bold">
-                Studio Base & Contact
-              </h4>
+              <div className="flex items-center gap-3.5 pb-2 border-b border-white/10">
+                <div className="w-12 h-12 rounded-full bg-white p-0.5 border border-teal-400/40 shadow-lg shadow-teal-500/20 flex items-center justify-center overflow-hidden shrink-0">
+                  <Image
+                    src="/logo.png"
+                    alt="Sri Kaleeshwari Aqua Farm Logo"
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain rounded-full"
+                  />
+                </div>
+                <div>
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-orange-400 font-bold">
+                    Studio Base & Contact
+                  </h4>
+                  <div className="text-sm font-bold text-white">
+                    Sri Kaleeshwari Aqua Farm
+                  </div>
+                </div>
+              </div>
 
               <div className="space-y-4 text-sm text-slate-300">
                 <div className="flex items-start gap-3">

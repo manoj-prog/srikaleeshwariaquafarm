@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Sparkles, Images, ShieldCheck } from "lucide-react";
 import InstagramIcon from "@/components/ui/InstagramIcon";
@@ -20,6 +21,16 @@ export default function HeroBanner() {
 
         {/* Top Tag & Studio Badge */}
         <div className="relative z-10 flex flex-wrap items-center gap-3 mb-6">
+          <div className="w-8 h-8 rounded-full bg-white p-0.5 border border-teal-400/40 shadow-[0_0_15px_rgba(45,212,191,0.4)] flex items-center justify-center overflow-hidden shrink-0">
+            <Image
+              src="/logo.png"
+              alt="Sri Kaleeshwari Aqua Farm Logo"
+              width={32}
+              height={32}
+              priority
+              className="w-full h-full object-contain rounded-full"
+            />
+          </div>
           <DepthBadge label="-0 M · SURFACE STUDIO" variant="teal" />
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-mono tracking-wider text-orange-300 bg-orange-500/10 border border-orange-500/20">
             <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-ping" />
